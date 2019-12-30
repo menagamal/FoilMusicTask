@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoilTask2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9TR-3w-dTO"/>
+                        <viewControllerLayoutGuide type="bottom" id="yGi-ue-zQr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JR-ZN-lbd">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BiY-bn-BAJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="794"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="794" placeholder="YES" id="doE-EN-MRK"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BiY-bn-BAJ" firstAttribute="leading" secondItem="5JR-ZN-lbd" secondAttribute="leading" id="3aB-LJ-Z8A"/>
+                                    <constraint firstItem="BiY-bn-BAJ" firstAttribute="top" secondItem="5JR-ZN-lbd" secondAttribute="top" id="9WD-Vs-qOA"/>
+                                    <constraint firstItem="BiY-bn-BAJ" firstAttribute="width" secondItem="5JR-ZN-lbd" secondAttribute="width" id="9a4-lx-T7A"/>
+                                    <constraint firstAttribute="bottom" secondItem="BiY-bn-BAJ" secondAttribute="bottom" id="WFX-NO-uRz"/>
+                                    <constraint firstAttribute="trailing" secondItem="BiY-bn-BAJ" secondAttribute="trailing" id="ffE-RA-UBp"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="0bA-gN-Rkm"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="3p4-ux-HW4"/>
+                            </scrollView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reserve Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2f-jx-3YI">
+                                <rect key="frame" x="20" y="62" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="didWrite:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Pmq-Ay-9oI"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.85680650684931503" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Y2f-jx-3YI" secondAttribute="trailing" constant="20" id="Bho-Ot-yYH"/>
+                            <constraint firstItem="5JR-ZN-lbd" firstAttribute="top" secondItem="Y2f-jx-3YI" secondAttribute="bottom" constant="8" id="OKc-KP-Ssb"/>
+                            <constraint firstItem="5JR-ZN-lbd" firstAttribute="bottom" secondItem="yGi-ue-zQr" secondAttribute="top" id="PvM-Ox-Uic"/>
+                            <constraint firstAttribute="leading" secondItem="5JR-ZN-lbd" secondAttribute="leading" id="XBn-qS-lrp"/>
+                            <constraint firstItem="Y2f-jx-3YI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ZSR-CW-Tb5"/>
+                            <constraint firstItem="Y2f-jx-3YI" firstAttribute="top" secondItem="9TR-3w-dTO" secondAttribute="bottom" constant="18" id="ieb-P0-sv8"/>
+                            <constraint firstItem="5JR-ZN-lbd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="qFg-jA-KAo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listStackView" destination="BiY-bn-BAJ" id="u02-zL-nhX"/>
+                        <outlet property="textfieldSearch" destination="Y2f-jx-3YI" id="g6M-Bw-cKe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
